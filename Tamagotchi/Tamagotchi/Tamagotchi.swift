@@ -20,13 +20,13 @@ class Tamagotchi {
     private var ill: Bool
     
     
-    init() {
+    init(name: String, gender: Bool) {
         age = 0
-        weight = 1
+        weight = 0
         happiness = "sad"
-        gender = true
+        self.name = name
+        self.gender = gender
         height = 0.0
-        name = "Maurice"
         hunger = 0
         ill = false
     }
@@ -38,11 +38,32 @@ class Tamagotchi {
     func getWeight() -> Int {
         return self.weight
     }
+    func getHappiness() -> String {
+        return self.happiness
+    }
     
-    func getEverything() -> (Int, Int, String, Bool, Double, String, Int, Bool) {
-        return (self.age, self.weight, self.happiness, self.gender, self.height, self.name, self.hunger, self.ill)
+    func getGender() -> Bool {
+        return self.gender
         
     }
+    
+    func getHeight() -> Double {
+        return self.height
+    }
+    
+    func getName() -> String {
+        return self.name
+        
+    }
+    func getHunger() -> Int {
+        return self.hunger
+    }
+    
+    func getIll() -> Bool {
+        return self.ill
+    }
+    
+        
 
     
 
