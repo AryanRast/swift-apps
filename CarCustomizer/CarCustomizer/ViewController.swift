@@ -18,23 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet var ultraPackage: UISwitch!
     
   
-    var remainingFunds = 2000 {
+    var remainingFunds = 1000 {
         didSet {
-            ultraPackage.isEnabled = true
-            tiresPackage.isEnabled = true
-            enginePackage.isEnabled = true
-            nitroPackage.isEnabled = true
             remainingFundsDisplay.text = "Remaining Funds: $\(remainingFunds)"
-            if remainingFunds < 500 {
-                tiresPackage.isEnabled = false
-                enginePackage.isEnabled = false
-            } else if remainingFunds < 750 {
-                nitroPackage.isEnabled = false
-            } else if remainingFunds < 2000 {
-                ultraPackage.isEnabled = false
-            }
+            switchChange()
         }
     }
+    
+    
+    
     var starterCars = StarterCars()
     var index = 0
     var car: Car? {
@@ -55,6 +47,7 @@ class ViewController: UIViewController {
             index = 0
         }
         car = starterCars.cars[index]
+        reset()
       }
     
     
@@ -83,10 +76,10 @@ class ViewController: UIViewController {
     @IBAction func nitroToggle(_ sender: Any) {
         if nitroPackage.isOn {
             car?.acceleration -= 0.5
-            remainingFunds -= 750
+            remainingFunds -= 500
         } else {
             car?.acceleration += 0.5
-            remainingFunds += 750
+            remainingFunds += 500
         }
     }
     
@@ -95,15 +88,48 @@ class ViewController: UIViewController {
             car?.acceleration -= 0.5
             car?.topSpeed += 30
             car?.handling += 1
-            remainingFunds -= 2000
+            remainingFunds -= 1000
         } else {
             car?.acceleration += 0.5
             car?.topSpeed -= 30
             car?.handling -= 1
-            remainingFunds += 2000
+            remainingFunds += 1000
         }
     }
     
+    func reset() {
+        remainingFunds = 1000
+        enginePackage.setOn(false, animated: true)
+        tiresPackage.setOn(false, animated: true)
+        nitroPackage.setOn(false, animated: true)
+        ultraPackage.setOn(false, animated: true)
+    }
+    
+    func switchChange() {
+        enginePackage.isEnabled = enableOrNot(enginePackage)
+        tiresPackage.isEnabled = enableOrNot(tiresPackage)
+        nitroPackage.isEnabled = enableOrNot(nitroPackage)
+        ultraPackage.isEnabled = enableOrNot(ultraPackage)
+    }
+    
+    func enableOrNot(_ control: UISwitch) -> Bool {
+        if control.isOn {
+            return true
+        } else {
+            if remainingFunds >= 1000 {
+                return true
+            } else if remainingFunds >= 500 {
+                let name = control.accessibilityIdentifier
+                if name == "ultraSwitch" {
+                    return false
+                } else {
+                    return true
+                }
+            } else {
+                return false
+            }
+        }
+    }
 
 }
 
