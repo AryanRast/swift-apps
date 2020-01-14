@@ -13,7 +13,7 @@ struct Tamagotchi {
     var weight: Int
     var happiness: Int
     var gender: String
-    var height: Double
+    var height: Int
     var name: String
     var hunger: Int
     var health: String
@@ -21,12 +21,12 @@ struct Tamagotchi {
     func displayStats() -> String {
         return """
         name: \(name)
-        Age: \(age)
+        Age: \(age) months
         gender: \(gender)
-        Weight: \(weight)
+        Weight: \(weight)kg
         happiness: \(happiness)
         hunger: \(hunger)
-        height: \(hunger)
+        height: \(height)ft
         health: \(health)
         """
     }
