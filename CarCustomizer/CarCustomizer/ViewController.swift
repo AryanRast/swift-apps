@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet var tiresPackage: UISwitch!
     @IBOutlet var nitroPackage: UISwitch!
     @IBOutlet var ultraPackage: UISwitch!
+    @IBOutlet var remainingTimeDisplay: UILabel!
     
-  
+    var timeRemaining = 30
     var remainingFunds = 1000 {
         didSet {
             remainingFundsDisplay.text = "Remaining Funds: $\(remainingFunds)"
@@ -34,11 +35,15 @@ class ViewController: UIViewController {
             carStatistics.text = car?.displayStats()
         }
     }
+    
+    var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         car = starterCars.cars[index]
         remainingFundsDisplay.text = "Remaining Funds: $\(remainingFunds)"
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        remainingTimeDisplay.text = "\(timeRemaining)s"
     }
     
     @IBAction func nextCar(_ sender: Any) {
@@ -128,6 +133,21 @@ class ViewController: UIViewController {
             } else {
                 return false
             }
+        }
+    }
+    
+    @objc func countdown() {
+        if timeRemaining > 0 {
+            timeRemaining -= 1
+            remainingTimeDisplay.text = "\(timeRemaining)s"
+        } else {
+            timer?.invalidate()
+            reset()
+            enginePackage.isEnabled = false
+            tiresPackage.isEnabled = false
+            nitroPackage.isEnabled = false
+            ultraPackage.isEnabled = false
+            
         }
     }
 
