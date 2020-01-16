@@ -9,24 +9,21 @@
 import Foundation
 
 struct Tamagotchi {
-    var age: Int
     var weight: Int
-    var happiness: Int
-    var gender: String
-    var height: Int
+    var happiness: Double
+    var state: String
+    var height: Double
     var name: String
-    var hunger: Int
+    var hunger: Double
     var health: String
     
     func displayStats() -> String {
         return """
-        name: \(name)
-        Age: \(age) months
-        gender: \(gender)
+        state: \(state)
         Weight: \(weight)kg
-        happiness: \(happiness)
+        happiness: \(happiness)/10
         hunger: \(hunger)
-        height: \(height)ft
+        height: \(height)cm
         health: \(health)
         """
     }
