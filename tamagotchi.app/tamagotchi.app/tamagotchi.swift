@@ -10,7 +10,7 @@ import Foundation
 
 struct Tamagotchi {
     var weight: Int
-    var happiness: Double
+    var happiness: Int
     var state: String
     var height: Double
     var name: String

@@ -11,17 +11,19 @@ import UIKit
 class ViewController: UIViewController {
     
     var healthChart = ["God level", "Perfect", "Fit", "Healthy", "Ok", "Unwell", "Not good", "ill", "Severely ill", "Near Death", "Death"]
-    var stateChart = ["Fresh", "Clean", "Ok", "Bearable", "Smelly", "Unbearable", "slob", "covered in mould"]
+    var stateChart = ["Fresh", "Clean", "Ok", "Bearable", "Smelly", "Unbearable", "slob", "Mouldy"]
     var age = 0
     var i = 3
     var j = 3
-    var score = 0.0
+    var score = 0
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var tamagotchiStats: UILabel!
     @IBOutlet var ageDisplay: UILabel!
     @IBOutlet var idealWeightDisplay: UILabel!
     @IBOutlet var nameDisplay: UILabel!
     @IBOutlet var pointsDisplay: UILabel!
+    @IBOutlet var progress: UIProgressView!
     
     var tamagotchi = Tamagotchi(weight: 30, happiness: 5, state: "bearable", height: 2, name: "Maurice", hunger: 5, health: "Ok")
     
@@ -30,24 +32,57 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = UIImage(named: "startmaurice")
         tamagotchiStats.text = tamagotchi.displayStats()
-        timer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
         ageDisplay.text = "age: \(age) days"
         idealWeightDisplay.text = "Ideal weight: \(idealWeight)kg"
         nameDisplay.text = "\(tamagotchi.name)"
         pointsDisplay.text = "\(score)"
     }
     
-    func death() {
+    
+    func death(title: String, message: String) {
+        imageView.image = UIImage(named: "deathmaurice") //NOT WORKING, IMAGE WILL NOT UPDATE??!! :(
+        timer?.invalidate()
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        self.present(alert, animated: true)
+                
     }
     
     func updateStats() {
+        if age == 20{
+            death(title: "Maurice Has Passed", message: "Congratulations, Maurice has died of natural causes. He is in a better place now. You scored \(score) points")
+        }
+        if j == stateChart.count - 1 {
+            death(title: "Death by Smell", message: "Maurice was so dirty that he was engulfed in mould and subsequently suffocated. You scored \(score) points")
+        }
+        if i == healthChart.count - 1 {
+            death(title: "Death by Ill Health", message: "Unfortunately Maurice has passed away due to poor health. It is illegal to neglect your pet like this. the feds are on their way. You scored \(score) points")
+        }
+        if tamagotchi.happiness == 0 {
+            death(title: "Death by Sadness", message: "Maurice has ended his own life due to sadness of the heart and mind. You scored \(score) points")
+        }
+        if tamagotchi.hunger > 10 {
+            death(title: "Death by Starvation", message: "Regardless of his weight, Maurice decided it was better to be dead than to exist in a world wher his hunger level wher so high. You scored \(score) points")
+        }
         if tamagotchi.weight < 0 {
-            tamagotchi.weight = 0
+            tamagotchi.weight = 0 //bug for weight fixed here please change later rast
+        }
+        if tamagotchi.happiness > 8 {
+            imageView.image = UIImage(named: "happymaurice")
+        } else if tamagotchi.happiness > 5 {
+            imageView.image = UIImage(named: "startmaurice")
+        } else if tamagotchi.happiness > 3 {
+            imageView.image = UIImage(named: "okmaurice")
+        } else {
+            imageView.image = UIImage(named: "sadmaurice")
         }
         tamagotchi.state = stateChart[j]
         tamagotchi.health = healthChart[i]
-        idealWeightDisplay.text = "Ideal weight: \(idealWeight)kg"
+        
         tamagotchiStats.text = tamagotchi.displayStats()
         pointsDisplay.text = "\(score)"
     
@@ -69,7 +104,7 @@ class ViewController: UIViewController {
         tamagotchi.height += 0.5
         tamagotchi.weight += 3
         
-        if tamagotchi.hunger > 0 {
+        if tamagotchi.hunger >= 1 {
             tamagotchi.hunger -= 1
             
         }
@@ -90,12 +125,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func mealButton(_ sender: Any) {
-        tamagotchi.weight += 20
+        tamagotchi.weight += 15
         tamagotchi.height += 1
         if tamagotchi.hunger >= 2 {
             tamagotchi.hunger -= 2
         }
-        //happines needs to be included
+        
         updateStats()
     }
     
@@ -107,21 +142,31 @@ class ViewController: UIViewController {
     }
     
     @IBAction func exerciseButton(_ sender: Any) {
-        if tamagotchi.weight >= 3 {
-            tamagotchi.weight -= 3
+        if tamagotchi.weight >= 5 {
+            tamagotchi.weight -= 5
             if tamagotchi.hunger < 10 {
-                tamagotchi.hunger += 1
+                tamagotchi.hunger += 0.5
             }
         }
         updateStats()
     }
     
     @objc func countdown() {
+        progress.progress += 0.05
+        
         age += 1
-        ageDisplay.text = "age: \(age) days"
+        ageDisplay.text = "age: \(age) months"
         idealWeight += 5
+        if age > 12 {
+            if tamagotchi.happiness > 0 {
+                tamagotchi.happiness -= 1
+            }
+            if i < stateChart.count - 1{
+                i += 2
+            }
+        }
         if idealWeight - tamagotchi.weight > 10 || idealWeight - tamagotchi.weight < -10 {
-            if i < healthChart.count - 1 {
+            if i < healthChart.count {
                 i += 1
             }
         } else {
@@ -141,11 +186,14 @@ class ViewController: UIViewController {
                 tamagotchi.happiness += 1
             }
         }
-        if i > 2 {
-            if tamagotchi.happiness > 0 {
-                tamagotchi.happiness -= 1
+        if i > 4 {
+            if tamagotchi.happiness > 2 {
+                tamagotchi.happiness -= 2
             }
             
+        } else if i > 2 {
+            if tamagotchi.happiness > 1 {
+            }
         } else {
             if tamagotchi.happiness < 10 {
                 tamagotchi.happiness += 1
@@ -159,9 +207,10 @@ class ViewController: UIViewController {
         tamagotchi.hunger += 1
         tamagotchi.health = healthChart[i]
         score += 100 * (tamagotchi.happiness * tamagotchi.happiness)
-        if i < stateChart.count - 1 {
+        if i < stateChart.count {
             i += 1
         }
+        idealWeightDisplay.text = "Ideal weight: \(idealWeight)kg"
         updateStats()
     }
 
