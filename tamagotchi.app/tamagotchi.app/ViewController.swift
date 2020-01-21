@@ -41,18 +41,34 @@ class ViewController: UIViewController {
         pointsDisplay.text = "\(score)"
     }
     
+    func reset() {
+        progress.progress = 0
+        
+    }
+    
     
     func death(title: String, message: String) {
-        imageView.image = UIImage(named: "deathmaurice") //NOT WORKING, IMAGE WILL NOT UPDATE??!! :(
+        imageView.image = UIImage(named:"deathmaurice")
+        
         timer?.invalidate()
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
         self.present(alert, animated: true)
+        
+
                 
     }
     
     func updateStats() {
+        if tamagotchi.happiness > 8 {
+            imageView.image = UIImage(named: "happymaurice")
+        } else if tamagotchi.happiness > 5 {
+            imageView.image = UIImage(named: "startmaurice")
+        } else if tamagotchi.happiness > 3 {
+            imageView.image = UIImage(named: "okmaurice")
+        } else {
+            imageView.image = UIImage(named: "sadmaurice")
+        }
         if age == 20{
             death(title: "Maurice Has Passed", message: "Congratulations, Maurice has died of natural causes. He is in a better place now. You scored \(score) points")
         }
@@ -63,23 +79,15 @@ class ViewController: UIViewController {
             death(title: "Death by Ill Health", message: "Unfortunately Maurice has passed away due to poor health. It is illegal to neglect your pet like this. the feds are on their way. You scored \(score) points")
         }
         if tamagotchi.happiness == 0 {
-            death(title: "Death by Sadness", message: "Maurice has ended his own life due to sadness of the heart and mind. You scored \(score) points")
+            death(title: "Death by Sadness", message: "Maurice has died of a broken heart. You scored \(score) points")
         }
         if tamagotchi.hunger > 10 {
-            death(title: "Death by Starvation", message: "Regardless of his weight, Maurice decided it was better to be dead than to exist in a world wher his hunger level wher so high. You scored \(score) points")
+            death(title: "Death by Starvation", message: "Regardless of his weight, Maurice decided it was better to be dead than to exist in a world where his hunger level where so high. You scored \(score) points")
         }
         if tamagotchi.weight < 0 {
-            tamagotchi.weight = 0 //bug for weight fixed here please change later rast
+            tamagotchi.weight = 0 //bug for weight fixed here please change later 
         }
-        if tamagotchi.happiness > 8 {
-            imageView.image = UIImage(named: "happymaurice")
-        } else if tamagotchi.happiness > 5 {
-            imageView.image = UIImage(named: "startmaurice")
-        } else if tamagotchi.happiness > 3 {
-            imageView.image = UIImage(named: "okmaurice")
-        } else {
-            imageView.image = UIImage(named: "sadmaurice")
-        }
+       
         tamagotchi.state = stateChart[j]
         tamagotchi.health = healthChart[i]
         
