@@ -23,7 +23,7 @@ struct Tamagotchi {
         Weight: \(weight)kg
         happiness: \(happiness)/10
         hunger: \(hunger)
-        height: \(height)cm
+        height: \(height) ft
         health: \(health)
         """
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var leaderboard = [Int]()
     var healthChart = ["God level", "Perfect", "Fit", "Healthy", "Ok", "Unwell", "Not good", "ill", "Severely ill", "Near Death", "Death"]
     var stateChart = ["Fresh", "Clean", "Ok", "Bearable", "Smelly", "Unbearable", "slob", "Mouldy"]
     var age = 0
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet var pointsDisplay: UILabel!
     @IBOutlet var progress: UIProgressView!
     
-    var tamagotchi = Tamagotchi(weight: 30, happiness: 5, state: "bearable", height: 2, name: "Maurice", hunger: 5, health: "Ok")
+    var tamagotchi = Tamagotchi(weight: 30, happiness: 6, state: "bearable", height: 2, name: "Maurice", hunger: 5, health: "Ok")
     
     var timer: Timer?
     var idealWeight = 40
@@ -43,16 +44,37 @@ class ViewController: UIViewController {
     
     func reset() {
         progress.progress = 0
+        age = 0
+        i = 3
+        j = 3
+        score = 0
+        imageView.image = UIImage(named: "startmaurice")
+        idealWeight = 40
+        idealWeightDisplay.text = "Ideal weight: \(idealWeight)kg"
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        tamagotchi.weight = 30
+        tamagotchi.happiness = 6
+        tamagotchi.height = 2
+        tamagotchi.hunger = 5
+        ageDisplay.text = "age: \(age) days"
+        updateStats()
         
     }
     
     
     func death(title: String, message: String) {
+        leaderboard.append(score)
         imageView.image = UIImage(named:"deathmaurice")
         
         timer?.invalidate()
         
+        
+        
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "reset", style: UIAlertAction.Style.default, handler: { (action) in
+            self.reset()
+        }))
         self.present(alert, animated: true)
         
 
@@ -157,6 +179,39 @@ class ViewController: UIViewController {
             }
         }
         updateStats()
+    }
+    
+    func leaderboardTopTen() {
+        let endPoint = leaderboard.count
+        var leaderboardString = """
+        """
+
+        var temp = 0
+
+        for j in 0 ..< leaderboard.count {
+            for i in 0 ..< endPoint - 1 - j  {
+                if leaderboard[i] < leaderboard[i+1] {
+                    temp = leaderboard[i]
+                    leaderboard[i] = leaderboard[i+1]
+                    leaderboard[i+1] = temp
+                }
+            }
+        }
+        for q in 0..<leaderboard.count {
+            if q == 5 {
+                q = leaderboard.count
+            }
+        }
+
+    }
+    
+    @IBAction func leaderboardButton(_ sender: Any) {
+        leaderboardTopTen()
+        
+    }
+    
+    func displayLeaderBoard(title: String, message: String) {
+        
     }
     
     @objc func countdown() {
