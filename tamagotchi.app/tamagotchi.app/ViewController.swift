@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var j = 3
     var score = 0
     
+
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var tamagotchiStats: UILabel!
     @IBOutlet var ageDisplay: UILabel!
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         imageView.image = UIImage(named: "startmaurice")
         tamagotchiStats.text = tamagotchi.displayStats()
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
@@ -67,10 +69,12 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named:"deathmaurice")
         
         timer?.invalidate()
+        var messageNew = message
+        if score > leaderboard[0] {
+            messageNew += "\n New highscore!"
+        }
         
-        
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: title, message: messageNew, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "reset", style: UIAlertAction.Style.default, handler: { (action) in
             self.reset()
@@ -95,16 +99,16 @@ class ViewController: UIViewController {
             death(title: "Maurice Has Passed", message: "Congratulations, Maurice has died of natural causes. He is in a better place now. You scored \(score) points")
         }
         if j == stateChart.count - 1 {
-            death(title: "Death by Smell", message: "Maurice was so dirty that he was engulfed in mould and subsequently suffocated. You scored \(score) points")
+            death(title: "DEATH BY SMELL", message: "Maurice was so dirty that he was engulfed in mould and subsequently suffocated. You scored \(score) points")
         }
         if i == healthChart.count - 1 {
-            death(title: "Death by Ill Health", message: "Unfortunately Maurice has passed away due to poor health. It is illegal to neglect your pet like this. the feds are on their way. You scored \(score) points")
+            death(title: "DEATH BY ILLNESS", message: "Unfortunately Maurice has passed away due to poor health. It is illegal to neglect your pet like this. the feds are on their way. You scored \(score) points")
         }
         if tamagotchi.happiness == 0 {
-            death(title: "Death by Sadness", message: "Maurice has died of a broken heart. You scored \(score) points")
+            death(title: "DEATH BY SADNESS", message: "Maurice has died of a broken heart. You scored \(score) points")
         }
         if tamagotchi.hunger > 10 {
-            death(title: "Death by Starvation", message: "Regardless of his weight, Maurice decided it was better to be dead than to exist in a world where his hunger level where so high. You scored \(score) points")
+            death(title: "DEATH BY STARVATION", message: "Regardless of his weight, Maurice decided it was better to be dead than to exist in a world where his hunger level where so high. You scored \(score) points")
         }
         if tamagotchi.weight < 0 {
             tamagotchi.weight = 0 //bug for weight fixed here please change later 
@@ -197,11 +201,15 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
         for q in 0..<leaderboard.count {
-            if q == 5 {
-                q = leaderboard.count
+            
+            if q < 5 {
+                leaderboardString.append("\n")
+                leaderboardString.append("\(q+1). \(leaderboard[q])")
             }
         }
+        displayLeaderBoard(title: "TOP SCORES", message: leaderboardString)
 
     }
     
@@ -211,6 +219,17 @@ class ViewController: UIViewController {
     }
     
     func displayLeaderBoard(title: String, message: String) {
+        
+        timer?.invalidate()
+        
+        
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action) in
+            self.reset()
+        }))
+        self.present(alert, animated: true)
         
     }
     
