@@ -59,6 +59,7 @@ class ViewController: UIViewController {
         tamagotchi.height = 2
         tamagotchi.hunger = 5
         ageDisplay.text = "age: \(age) days"
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         updateStats()
         
     }
@@ -237,6 +238,7 @@ class ViewController: UIViewController {
         progress.progress += 0.05
         
         age += 1
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "\(age)background")!)
         ageDisplay.text = "age: \(age) months"
         idealWeight += 5
         if age > 12 {

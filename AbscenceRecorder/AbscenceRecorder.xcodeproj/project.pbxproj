@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6095E9423E9DA3F007DA06F /* DivisionAbscenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6095E9323E9DA3F007DA06F /* DivisionAbscenceViewController.swift */; };
+		C64BC1F623E211470058208D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F523E211470058208D /* AppDelegate.swift */; };
+		C64BC1F823E211470058208D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F723E211470058208D /* SceneDelegate.swift */; };
+		C64BC1FA23E211470058208D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F923E211470058208D /* ViewController.swift */; };
+		C64BC1FD23E211470058208D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64BC1FB23E211470058208D /* Main.storyboard */; };
+		C64BC1FF23E211480058208D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64BC1FE23E211480058208D /* Assets.xcassets */; };
+		C64BC20223E211480058208D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64BC20023E211480058208D /* LaunchScreen.storyboard */; };
+		C64BC20D23E211480058208D /* AbscenceRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC20C23E211480058208D /* AbscenceRecorderTests.swift */; };
+		C64BC21823E211490058208D /* AbscenceRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC21723E211490058208D /* AbscenceRecorderUITests.swift */; };
+		C64BC22623E2134F0058208D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC22523E2134F0058208D /* Student.swift */; };
+		C64BC22823E213D90058208D /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC22723E213D90058208D /* Division.swift */; };
+		C6AC0C6523E23FA4005FCD06 /* DivisionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AC0C6423E23FA4005FCD06 /* DivisionFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C64BC20923E211480058208D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C64BC1EA23E211470058208D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C64BC1F123E211470058208D;
+			remoteInfo = AbscenceRecorder;
+		};
+		C64BC21423E211490058208D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C64BC1EA23E211470058208D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C64BC1F123E211470058208D;
+			remoteInfo = AbscenceRecorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C6095E9323E9DA3F007DA06F /* DivisionAbscenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionAbscenceViewController.swift; sourceTree = "<group>"; };
+		C64BC1F223E211470058208D /* AbscenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbscenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64BC1F523E211470058208D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C64BC1F723E211470058208D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C64BC1F923E211470058208D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C64BC1FC23E211470058208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C64BC1FE23E211480058208D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C64BC20123E211480058208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C64BC20323E211480058208D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64BC20823E211480058208D /* AbscenceRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbscenceRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64BC20C23E211480058208D /* AbscenceRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbscenceRecorderTests.swift; sourceTree = "<group>"; };
+		C64BC20E23E211480058208D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64BC21323E211490058208D /* AbscenceRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbscenceRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64BC21723E211490058208D /* AbscenceRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbscenceRecorderUITests.swift; sourceTree = "<group>"; };
+		C64BC21923E211490058208D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64BC22523E2134F0058208D /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		C64BC22723E213D90058208D /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
+		C6AC0C6423E23FA4005FCD06 /* DivisionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C64BC1EF23E211470058208D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64BC20523E211480058208D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64BC21023E211490058208D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C64BC1E923E211470058208D = {
+			isa = PBXGroup;
+			children = (
+				C64BC1F423E211470058208D /* AbscenceRecorder */,
+				C64BC20B23E211480058208D /* AbscenceRecorderTests */,
+				C64BC21623E211490058208D /* AbscenceRecorderUITests */,
+				C64BC1F323E211470058208D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C64BC1F323E211470058208D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C64BC1F223E211470058208D /* AbscenceRecorder.app */,
+				C64BC20823E211480058208D /* AbscenceRecorderTests.xctest */,
+				C64BC21323E211490058208D /* AbscenceRecorderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C64BC1F423E211470058208D /* AbscenceRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				C64BC1F523E211470058208D /* AppDelegate.swift */,
+				C64BC1F723E211470058208D /* SceneDelegate.swift */,
+				C64BC1F923E211470058208D /* ViewController.swift */,
+				C64BC1FB23E211470058208D /* Main.storyboard */,
+				C64BC1FE23E211480058208D /* Assets.xcassets */,
+				C64BC20023E211480058208D /* LaunchScreen.storyboard */,
+				C64BC20323E211480058208D /* Info.plist */,
+				C64BC22523E2134F0058208D /* Student.swift */,
+				C64BC22723E213D90058208D /* Division.swift */,
+				C6AC0C6423E23FA4005FCD06 /* DivisionFactory.swift */,
+				C6095E9323E9DA3F007DA06F /* DivisionAbscenceViewController.swift */,
+			);
+			path = AbscenceRecorder;
+			sourceTree = "<group>";
+		};
+		C64BC20B23E211480058208D /* AbscenceRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C64BC20C23E211480058208D /* AbscenceRecorderTests.swift */,
+				C64BC20E23E211480058208D /* Info.plist */,
+			);
+			path = AbscenceRecorderTests;
+			sourceTree = "<group>";
+		};
+		C64BC21623E211490058208D /* AbscenceRecorderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C64BC21723E211490058208D /* AbscenceRecorderUITests.swift */,
+				C64BC21923E211490058208D /* Info.plist */,
+			);
+			path = AbscenceRecorderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C64BC1F123E211470058208D /* AbscenceRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64BC21C23E211490058208D /* Build configuration list for PBXNativeTarget "AbscenceRecorder" */;
+			buildPhases = (
+				C64BC1EE23E211470058208D /* Sources */,
+				C64BC1EF23E211470058208D /* Frameworks */,
+				C64BC1F023E211470058208D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AbscenceRecorder;
+			productName = AbscenceRecorder;
+			productReference = C64BC1F223E211470058208D /* AbscenceRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C64BC20723E211480058208D /* AbscenceRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64BC21F23E211490058208D /* Build configuration list for PBXNativeTarget "AbscenceRecorderTests" */;
+			buildPhases = (
+				C64BC20423E211480058208D /* Sources */,
+				C64BC20523E211480058208D /* Frameworks */,
+				C64BC20623E211480058208D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C64BC20A23E211480058208D /* PBXTargetDependency */,
+			);
+			name = AbscenceRecorderTests;
+			productName = AbscenceRecorderTests;
+			productReference = C64BC20823E211480058208D /* AbscenceRecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C64BC21223E211490058208D /* AbscenceRecorderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64BC22223E211490058208D /* Build configuration list for PBXNativeTarget "AbscenceRecorderUITests" */;
+			buildPhases = (
+				C64BC20F23E211490058208D /* Sources */,
+				C64BC21023E211490058208D /* Frameworks */,
+				C64BC21123E211490058208D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C64BC21523E211490058208D /* PBXTargetDependency */,
+			);
+			name = AbscenceRecorderUITests;
+			productName = AbscenceRecorderUITests;
+			productReference = C64BC21323E211490058208D /* AbscenceRecorderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C64BC1EA23E211470058208D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Rastogi, Aryan (WING)";
+				TargetAttributes = {
+					C64BC1F123E211470058208D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					C64BC20723E211480058208D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = C64BC1F123E211470058208D;
+					};
+					C64BC21223E211490058208D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = C64BC1F123E211470058208D;
+					};
+				};
+			};
+			buildConfigurationList = C64BC1ED23E211470058208D /* Build configuration list for PBXProject "AbscenceRecorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C64BC1E923E211470058208D;
+			productRefGroup = C64BC1F323E211470058208D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C64BC1F123E211470058208D /* AbscenceRecorder */,
+				C64BC20723E211480058208D /* AbscenceRecorderTests */,
+				C64BC21223E211490058208D /* AbscenceRecorderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C64BC1F023E211470058208D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64BC20223E211480058208D /* LaunchScreen.storyboard in Resources */,
+				C64BC1FF23E211480058208D /* Assets.xcassets in Resources */,
+				C64BC1FD23E211470058208D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64BC20623E211480058208D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64BC21123E211490058208D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C64BC1EE23E211470058208D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64BC1FA23E211470058208D /* ViewController.swift in Sources */,
+				C6095E9423E9DA3F007DA06F /* DivisionAbscenceViewController.swift in Sources */,
+				C64BC1F623E211470058208D /* AppDelegate.swift in Sources */,
+				C64BC22823E213D90058208D /* Division.swift in Sources */,
+				C64BC1F823E211470058208D /* SceneDelegate.swift in Sources */,
+				C64BC22623E2134F0058208D /* Student.swift in Sources */,
+				C6AC0C6523E23FA4005FCD06 /* DivisionFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64BC20423E211480058208D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64BC20D23E211480058208D /* AbscenceRecorderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64BC20F23E211490058208D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64BC21823E211490058208D /* AbscenceRecorderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C64BC20A23E211480058208D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C64BC1F123E211470058208D /* AbscenceRecorder */;
+			targetProxy = C64BC20923E211480058208D /* PBXContainerItemProxy */;
+		};
+		C64BC21523E211490058208D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C64BC1F123E211470058208D /* AbscenceRecorder */;
+			targetProxy = C64BC21423E211490058208D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C64BC1FB23E211470058208D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C64BC1FC23E211470058208D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C64BC20023E211480058208D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C64BC20123E211480058208D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C64BC21A23E211490058208D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C64BC21B23E211490058208D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C64BC21D23E211490058208D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbscenceRecorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryanRast.AbscenceRecorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C64BC21E23E211490058208D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbscenceRecorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryanRast.AbscenceRecorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C64BC22023E211490058208D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbscenceRecorderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryanRast.AbscenceRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbscenceRecorder.app/AbscenceRecorder";
+			};
+			name = Debug;
+		};
+		C64BC22123E211490058208D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbscenceRecorderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryanRast.AbscenceRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbscenceRecorder.app/AbscenceRecorder";
+			};
+			name = Release;
+		};
+		C64BC22323E211490058208D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbscenceRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryanRast.AbscenceRecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AbscenceRecorder;
+			};
+			name = Debug;
+		};
+		C64BC22423E211490058208D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbscenceRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryanRast.AbscenceRecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AbscenceRecorder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C64BC1ED23E211470058208D /* Build configuration list for PBXProject "AbscenceRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64BC21A23E211490058208D /* Debug */,
+				C64BC21B23E211490058208D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64BC21C23E211490058208D /* Build configuration list for PBXNativeTarget "AbscenceRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64BC21D23E211490058208D /* Debug */,
+				C64BC21E23E211490058208D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64BC21F23E211490058208D /* Build configuration list for PBXNativeTarget "AbscenceRecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64BC22023E211490058208D /* Debug */,
+				C64BC22123E211490058208D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64BC22223E211490058208D /* Build configuration list for PBXNativeTarget "AbscenceRecorderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64BC22323E211490058208D /* Debug */,
+				C64BC22423E211490058208D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C64BC1EA23E211470058208D /* Project object */;
+}
