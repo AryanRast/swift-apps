@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class HomeViewController: UITableViewController {
     
     var divisions: [Division] = []
     var currentDate: Date = Date()
@@ -37,12 +37,6 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addDummyData()
-        for division in divisions {
-            print("code: \(division.code), No.: \(division.students.count)")
-            for student in division.students {
-                print(" \(student.forename)")
-            }
-        }
         updateDateDisplay()
     }
     
@@ -60,11 +54,24 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DivisionAbscenceViewController") as? DivisionAbscenceViewController else {
-            fatalError("Failed to load")
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        var abscence = Abscence(date: currentDate)
+       
+        let selectedDivision = divisions[indexPath.row]
+        
+        if let existingAbscence = selectedDivision.getAbscence(for: currentDate) {
+           abscence = existingAbscence
+        } else {
+            selectedDivision.abscences.append(abscence)
         }
-        vc.divison = divisions[indexPath.row]
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "DivisionAbscenceViewController", creator: { coder in
+                   return DivisionAbscenceViewController(coder: coder, division: selectedDivision, abscence: abscence)
+               }) else {
+                   fatalError("Failed to load")
+               }
+
         
         navigationController?.pushViewController(vc, animated: true)
         

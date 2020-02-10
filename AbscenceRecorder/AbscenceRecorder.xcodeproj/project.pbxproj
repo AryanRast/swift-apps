@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C6095E9423E9DA3F007DA06F /* DivisionAbscenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6095E9323E9DA3F007DA06F /* DivisionAbscenceViewController.swift */; };
+		C61CF44E23EC700800EDF517 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61CF44D23EC700800EDF517 /* StudentCell.swift */; };
+		C61CF45023EC71FE00EDF517 /* Abscence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61CF44F23EC71FE00EDF517 /* Abscence.swift */; };
 		C64BC1F623E211470058208D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F523E211470058208D /* AppDelegate.swift */; };
 		C64BC1F823E211470058208D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F723E211470058208D /* SceneDelegate.swift */; };
-		C64BC1FA23E211470058208D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F923E211470058208D /* ViewController.swift */; };
+		C64BC1FA23E211470058208D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64BC1F923E211470058208D /* HomeViewController.swift */; };
 		C64BC1FD23E211470058208D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64BC1FB23E211470058208D /* Main.storyboard */; };
 		C64BC1FF23E211480058208D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64BC1FE23E211480058208D /* Assets.xcassets */; };
 		C64BC20223E211480058208D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64BC20023E211480058208D /* LaunchScreen.storyboard */; };
@@ -40,10 +42,12 @@
 
 /* Begin PBXFileReference section */
 		C6095E9323E9DA3F007DA06F /* DivisionAbscenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionAbscenceViewController.swift; sourceTree = "<group>"; };
+		C61CF44D23EC700800EDF517 /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		C61CF44F23EC71FE00EDF517 /* Abscence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abscence.swift; sourceTree = "<group>"; };
 		C64BC1F223E211470058208D /* AbscenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbscenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64BC1F523E211470058208D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64BC1F723E211470058208D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C64BC1F923E211470058208D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C64BC1F923E211470058208D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C64BC1FC23E211470058208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C64BC1FE23E211480058208D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64BC20123E211480058208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 			children = (
 				C64BC1F523E211470058208D /* AppDelegate.swift */,
 				C64BC1F723E211470058208D /* SceneDelegate.swift */,
-				C64BC1F923E211470058208D /* ViewController.swift */,
+				C64BC1F923E211470058208D /* HomeViewController.swift */,
 				C64BC1FB23E211470058208D /* Main.storyboard */,
 				C64BC1FE23E211480058208D /* Assets.xcassets */,
 				C64BC20023E211480058208D /* LaunchScreen.storyboard */,
@@ -118,6 +122,8 @@
 				C64BC22723E213D90058208D /* Division.swift */,
 				C6AC0C6423E23FA4005FCD06 /* DivisionFactory.swift */,
 				C6095E9323E9DA3F007DA06F /* DivisionAbscenceViewController.swift */,
+				C61CF44D23EC700800EDF517 /* StudentCell.swift */,
+				C61CF44F23EC71FE00EDF517 /* Abscence.swift */,
 			);
 			path = AbscenceRecorder;
 			sourceTree = "<group>";
@@ -271,12 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C64BC1FA23E211470058208D /* ViewController.swift in Sources */,
+				C64BC1FA23E211470058208D /* HomeViewController.swift in Sources */,
 				C6095E9423E9DA3F007DA06F /* DivisionAbscenceViewController.swift in Sources */,
 				C64BC1F623E211470058208D /* AppDelegate.swift in Sources */,
+				C61CF44E23EC700800EDF517 /* StudentCell.swift in Sources */,
 				C64BC22823E213D90058208D /* Division.swift in Sources */,
 				C64BC1F823E211470058208D /* SceneDelegate.swift in Sources */,
 				C64BC22623E2134F0058208D /* Student.swift in Sources */,
+				C61CF45023EC71FE00EDF517 /* Abscence.swift in Sources */,
 				C6AC0C6523E23FA4005FCD06 /* DivisionFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

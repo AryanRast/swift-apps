@@ -13,10 +13,21 @@ class Division {
     
     let code: String
     var students: [Student] = []
+    var abscences: [Abscence] = []
     
     init(code: String) {
         self.code = code
     }
+    
+    func getAbscence(for date: Date) -> Abscence? {
+        
+        
+        return abscences.first(where: {
+            $0.takenOn == date
+        })
+    }
+    
+
     
     
 }
