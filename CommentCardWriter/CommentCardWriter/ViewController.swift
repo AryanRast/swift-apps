@@ -9,12 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var mySubject: Subject?
+    var comment: Comment?
 
+    @IBOutlet var commentdisplay: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    
+    @IBAction func SubjectNumberButton(_ sender: Any) {
+        mySubject? = Subject(name: "CompSci", teacher: "DPC", comment: nil)
+    }
+    
+    @IBAction func YESButton(_ sender: Any) {
+        comment = Comment(sentiment: nil, maxLength: 500)
+        mySubject?.comment = comment
+        commentdisplay.text = mySubject?.comment?.writtenComment()
+    }
+    
+    
+    
 }
 

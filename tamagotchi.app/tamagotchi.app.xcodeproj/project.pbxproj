@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C62E44FD23CDFE92000C79AB /* charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62E44FC23CDFE92000C79AB /* charts.swift */; };
 		C69654DE23CDCE57003C2B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69654DD23CDCE57003C2B9D /* AppDelegate.swift */; };
 		C69654E023CDCE57003C2B9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69654DF23CDCE57003C2B9D /* SceneDelegate.swift */; };
 		C69654E223CDCE57003C2B9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69654E123CDCE57003C2B9D /* ViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C62E44FC23CDFE92000C79AB /* charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charts.swift; sourceTree = "<group>"; };
 		C69654DA23CDCE57003C2B9D /* tamagotchi.app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tamagotchi.app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69654DD23CDCE57003C2B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C69654DF23CDCE57003C2B9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				C69654DD23CDCE57003C2B9D /* AppDelegate.swift */,
 				C69654DF23CDCE57003C2B9D /* SceneDelegate.swift */,
 				C69654E123CDCE57003C2B9D /* ViewController.swift */,
-				C62E44FC23CDFE92000C79AB /* charts.swift */,
 				C69654E323CDCE57003C2B9D /* Main.storyboard */,
 				C69654E623CDCE57003C2B9D /* Assets.xcassets */,
 				C69654E823CDCE57003C2B9D /* LaunchScreen.storyboard */,
@@ -269,7 +266,6 @@
 				C69654E223CDCE57003C2B9D /* ViewController.swift in Sources */,
 				C69654DE23CDCE57003C2B9D /* AppDelegate.swift in Sources */,
 				C69654E023CDCE57003C2B9D /* SceneDelegate.swift in Sources */,
-				C62E44FD23CDFE92000C79AB /* charts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

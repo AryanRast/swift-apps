@@ -15,6 +15,10 @@
 		C6C2D2EB23F2B36E0065921A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C2D2E923F2B36E0065921A /* LaunchScreen.storyboard */; };
 		C6C2D2F623F2B36E0065921A /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2D2F523F2B36E0065921A /* CommentCardWriterTests.swift */; };
 		C6C2D30123F2B36E0065921A /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2D30023F2B36E0065921A /* CommentCardWriterUITests.swift */; };
+		C6C2D30F23F2B46A0065921A /* CommentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2D30E23F2B46A0065921A /* CommentCard.swift */; };
+		C6C2D31123F2B6410065921A /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2D31023F2B6410065921A /* Subject.swift */; };
+		C6C2D31323F2B6B50065921A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2D31223F2B6B50065921A /* Comment.swift */; };
+		C6C2D31523F2B6F50065921A /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2D31423F2B6F50065921A /* Sentiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		C6C2D2FC23F2B36E0065921A /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C2D30023F2B36E0065921A /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		C6C2D30223F2B36E0065921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C2D30E23F2B46A0065921A /* CommentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCard.swift; sourceTree = "<group>"; };
+		C6C2D31023F2B6410065921A /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		C6C2D31223F2B6B50065921A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		C6C2D31423F2B6F50065921A /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				C6C2D2E723F2B36E0065921A /* Assets.xcassets */,
 				C6C2D2E923F2B36E0065921A /* LaunchScreen.storyboard */,
 				C6C2D2EC23F2B36E0065921A /* Info.plist */,
+				C6C2D30E23F2B46A0065921A /* CommentCard.swift */,
+				C6C2D31023F2B6410065921A /* Subject.swift */,
+				C6C2D31223F2B6B50065921A /* Comment.swift */,
+				C6C2D31423F2B6F50065921A /* Sentiment.swift */,
 			);
 			path = CommentCardWriter;
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C2D2E323F2B36D0065921A /* ViewController.swift in Sources */,
+				C6C2D31323F2B6B50065921A /* Comment.swift in Sources */,
+				C6C2D30F23F2B46A0065921A /* CommentCard.swift in Sources */,
 				C6C2D2DF23F2B36D0065921A /* AppDelegate.swift in Sources */,
+				C6C2D31123F2B6410065921A /* Subject.swift in Sources */,
+				C6C2D31523F2B6F50065921A /* Sentiment.swift in Sources */,
 				C6C2D2E123F2B36D0065921A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
