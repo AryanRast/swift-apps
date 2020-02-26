@@ -9,10 +9,19 @@
 import Foundation
 
 
-struct Subject {
+class Subject {
     
-    var name: String
-    var teacher: String
+    let name: String
+    let teacher: String
     var comment: Comment?
+    
+    init(name: String, teacher: String, comment: Comment?){
+        self.name = name
+        self.teacher = teacher
+        self.comment = comment
+        
+    }
+    
+//    func addComment()
     
 }

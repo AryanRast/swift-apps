@@ -9,9 +9,14 @@
 import Foundation
 
 
-struct CommentCard {
-    var subjects: [Subject?]
-    var student: String
+class CommentCard {
     
+    var subjects: [Subject]?
+    var student: String?
+    
+    init(subjects: [Subject]?, student: String?) {
+        self.subjects = subjects
+        self.student = student
+    }
     
 }

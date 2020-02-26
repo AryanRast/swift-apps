@@ -11,25 +11,33 @@ import UIKit
 class ViewController: UIViewController {
     
     var mySubject: Subject?
-    var comment: Comment?
+    var myCommentCard = CommentCard(subjects: nil, student: nil)
+
+
+
 
     @IBOutlet var commentdisplay: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
+    @IBAction func NameButton(_ sender: Any) {
+        myCommentCard.student = "Aryan"
+        commentdisplay.text = "my name is \(String(describing: myCommentCard.student)), \(String(describing: mySubject?.comment?.writtenComment()))"
+    }
     
     @IBAction func SubjectNumberButton(_ sender: Any) {
-        mySubject? = Subject(name: "CompSci", teacher: "DPC", comment: nil)
+        mySubject = Subject(name: "CompSci", teacher: "DPC", comment: nil)
     }
     
     @IBAction func YESButton(_ sender: Any) {
-        comment = Comment(sentiment: nil, maxLength: 500)
-        mySubject?.comment = comment
-        commentdisplay.text = mySubject?.comment?.writtenComment()
+        let myComment = Comment(sentiment: nil, maxLength: 500)
+        mySubject?.comment = myComment
+        
+        
+        
     }
     
     

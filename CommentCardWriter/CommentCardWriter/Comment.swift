@@ -8,10 +8,15 @@
 
 import Foundation
 
-struct Comment {
+class Comment {
     
-    var sentiment: Sentiment?
-    var maxLength: Int
+    let sentiment: Sentiment?
+    let maxLength: Int
+    
+    init(sentiment: Sentiment?, maxLength: Int) {
+        self.sentiment = sentiment
+        self.maxLength = maxLength
+    }
     
     func writtenComment() -> String {
         return "It is easy"

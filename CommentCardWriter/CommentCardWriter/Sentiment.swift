@@ -9,11 +9,18 @@
 import Foundation
 
 
-struct Sentiment {
+class Sentiment {
     
-    var effort: Int
-    var enjoyment: Int
-    var weaknesses: String
-    var strenght: String
+    let effort: Int
+    let enjoyment: Int
+    let weaknesses: String
+    let strength: String
+    
+    init(effort: Int, enjoyment: Int, weaknesses: String, strength: String) {
+        self.effort = effort
+        self.enjoyment = enjoyment
+        self.weaknesses = weaknesses
+        self.strength = strength
+    }
     
 }
