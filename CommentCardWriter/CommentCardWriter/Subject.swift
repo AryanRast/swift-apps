@@ -11,11 +11,11 @@ import Foundation
 
 class Subject {
     
-    let name: String
-    let teacher: String
+    let name: String?
+    let teacher: String?
     var comment: Comment?
     
-    init(name: String, teacher: String, comment: Comment?){
+    init(name: String?, teacher: String?, comment: Comment?){
         self.name = name
         self.teacher = teacher
         self.comment = comment
