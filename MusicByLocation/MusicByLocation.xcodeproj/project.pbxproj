@@ -15,6 +15,8 @@
 		C60B0D1B2406F9B700D09E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60B0D192406F9B700D09E9E /* LaunchScreen.storyboard */; };
 		C60B0D262406F9B700D09E9E /* MusicByLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B0D252406F9B700D09E9E /* MusicByLocationTests.swift */; };
 		C60B0D312406F9B700D09E9E /* MusicByLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B0D302406F9B700D09E9E /* MusicByLocationUITests.swift */; };
+		C6B96478240DAD45001207A6 /* ArtistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B96477240DAD45001207A6 /* ArtistResponse.swift */; };
+		C6B9647A240DADA1001207A6 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B96479240DADA1001207A6 /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C60B0D2C2406F9B700D09E9E /* MusicByLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicByLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60B0D302406F9B700D09E9E /* MusicByLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicByLocationUITests.swift; sourceTree = "<group>"; };
 		C60B0D322406F9B700D09E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6B96477240DAD45001207A6 /* ArtistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistResponse.swift; sourceTree = "<group>"; };
+		C6B96479240DADA1001207A6 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				C60B0D172406F9B700D09E9E /* Assets.xcassets */,
 				C60B0D192406F9B700D09E9E /* LaunchScreen.storyboard */,
 				C60B0D1C2406F9B700D09E9E /* Info.plist */,
+				C6B96477240DAD45001207A6 /* ArtistResponse.swift */,
+				C6B96479240DADA1001207A6 /* Artist.swift */,
 			);
 			path = MusicByLocation;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60B0D132406F9B600D09E9E /* ViewController.swift in Sources */,
+				C6B96478240DAD45001207A6 /* ArtistResponse.swift in Sources */,
 				C60B0D0F2406F9B600D09E9E /* AppDelegate.swift in Sources */,
+				C6B9647A240DADA1001207A6 /* Artist.swift in Sources */,
 				C60B0D112406F9B600D09E9E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
