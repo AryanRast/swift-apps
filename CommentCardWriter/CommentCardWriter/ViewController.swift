@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
    
     
+    @IBOutlet var nameField: UITextField!
     
     var myCommentCard = CommentCard(subjects: [], student: nil)
+    var firstName = ""
 
 
     @IBOutlet var myPicker: UIPickerView!
@@ -21,18 +23,24 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBOutlet var commentdisplay: UILabel!
     
+    @IBAction func generateButton(_ sender: Any) {
+          commentdisplay.text = "my name is \(String(describing: myCommentCard.student!)), \(String(describing: myCommentCard.subjects![0].comment!.writtenComment()))"
+      }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameField.delegate = self
         myPicker.dataSource = self
         myPicker.delegate = self
+    
     }
     
-    @IBAction func NameButton(_ sender: Any) {
-        myCommentCard.student = "Aryan"
-        commentdisplay.text = "my name is \(String(describing: myCommentCard.student!)), \(String(describing: myCommentCard.subjects![0].comment!.writtenComment()))"
+    @IBAction func enterButton(_ sender: Any) {
+        firstName = nameField.text!
+        myCommentCard.student = firstName
     }
+    
+  
     
     @IBAction func SubjectNumberButton(_ sender: Any) {
         for _ in 0...myPicker.selectedRow(inComponent: 0 ) {
@@ -40,10 +48,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
-    @IBAction func YESButton(_ sender: Any) {
+  
+    
+    @IBAction func sentimentButton(_ sender: Any) {
         let myComment = Comment(sentiment: nil, maxLength: 500)
         for Subject in (myCommentCard.subjects)! {
             Subject.comment = myComment
+        
         
         }
         
@@ -66,6 +77,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return numbers[row]
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
    
     
     

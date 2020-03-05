@@ -19,7 +19,7 @@ class Comment {
     }
     
     func writtenComment() -> String {
-        return "It is easy"
+        return "The subject(s) is easy. I need no help and I understand everything there is to know. I am omniscient"
     }
     
     
