@@ -24,16 +24,27 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     public var textVariable = ""
     public var completionHandler1: ((String?) -> Void)?
     public var completionHandler2: ((Int?) -> Void)?
+    public var completionHandler3: ((Int?) -> Void)?
+    public var completionHandler4: ((Int?) -> Void)?
     
     @IBAction func saveButton(_ sender: Any) {
         
         textVariable = subjectNameField.text ?? ""
         completionHandler1?(textVariable)
+        
         let wellPickerValue = wellPicker.selectedRow(inComponent: 0) + 1
         completionHandler2?(wellPickerValue)
         
+        let effortPickerValue = effortPicker.selectedRow(inComponent: 0) + 1
+        completionHandler3?(effortPickerValue)
+        
+        let enjoymentPickerValue = enjoymentPicker.selectedRow(inComponent: 0) + 1
+        completionHandler4?(enjoymentPickerValue)
+        
         dismiss(animated: true)
     }
+    
+    
     @IBAction func confirmButton(_ sender: Any) {
         subjectName.text = subjectNameField.text
         

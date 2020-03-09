@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "init(coder:)"
-            landmarkType = "7">
+            landmarkName = "SecondViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - ecf94d2eabdbcc2"
