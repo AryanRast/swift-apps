@@ -23,9 +23,54 @@ class HomeViewController: UITableViewController {
         updateDateDisplay()
     }
     
+    func convertDivisionToJson() -> String? {
+        let encoder = JSONEncoder()
+        guard let encoded = try? encoder.encode(divisions) else {
+            print("Unable to encode into Json")
+            return nil
+        }
+        
+        guard let json = String(data: encoded, encoding:  .utf8) else {
+            print("Unable to encode into string")
+            return nil
+        }
+        return json
+    }
     
+    func convertJsonToDivisions(json: Data) -> [Division]? {
+        let decoder = JSONDecoder()
+        guard let decoded = try? decoder.decode([Division].self, from: json) else {
+            return nil
+        }
+        
+        return decoded
+    }
     
+    func saveDataToFile() {
+        guard let divisionsJson = convertDivisionToJson() else {
+            return
+        }
+        
+        let filePath =
+            UserDocumentManager.getDocumentsDirectory()
+        .appendingPathComponent("division.txt")
+        do {
+            try divisionsJson.write(to: filePath, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print("Unable to save by writing to file")
+        }
+        
+    }
     
+    func loadDataFromFile() {
+        let filePath = UserDocumentManager.getDocumentsDirectory()
+        do {
+            let json = try Data(contentsOf: filePath)
+            divisions = convertJsonToDivisions(json: json) ?? []
+        } catch {
+            print("failed to read from file")
+        }
+    }
 
     func updateDateDisplay() {
         let formatter = DateFormatter()

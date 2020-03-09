@@ -3,4 +3,114 @@
    uuid = "7C1F219D-54FF-4091-BEEB-44916D529BB8"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CommentCardWriter/SecondViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - ecf94d2eabdbcc2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommentCardWriter.SecondViewController.init(coder: __C.NSCoder, subjectNumber: Swift.Int) -&gt; Swift.Optional&lt;CommentCardWriter.SecondViewController&gt;"
+                  moduleName = "CommentCardWriter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rastogi.a/Documents/swift-apps/CommentCardWriter/CommentCardWriter/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1086">
+               </Location>
+               <Location
+                  uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - 4a87ee34a867aa2d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommentCardWriter.SecondViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CommentCardWriter.SecondViewController&gt;"
+                  moduleName = "CommentCardWriter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rastogi.a/Documents/swift-apps/CommentCardWriter/CommentCardWriter/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1046">
+               </Location>
+               <Location
+                  uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - f58f98fdd74d7350"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommentCardWriter.SecondViewController.moodButton.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "CommentCardWriter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rastogi.a/Documents/swift-apps/CommentCardWriter/CommentCardWriter/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - a518e859c2239f64"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommentCardWriter.SecondViewController.moodButton.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "CommentCardWriter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rastogi.a/Documents/swift-apps/CommentCardWriter/CommentCardWriter/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - e0690a506bcf9857"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommentCardWriter.SecondViewController.moodButton.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "CommentCardWriter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rastogi.a/Documents/swift-apps/CommentCardWriter/CommentCardWriter/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "9F4F19C2-6B56-4093-AFE0-EA4650F102CB - 7101b84abccd02fb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommentCardWriter.SecondViewController.moodButton.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CommentCardWriter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rastogi.a/Documents/swift-apps/CommentCardWriter/CommentCardWriter/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

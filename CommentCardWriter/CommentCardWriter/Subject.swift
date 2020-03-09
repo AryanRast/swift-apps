@@ -11,7 +11,7 @@ import Foundation
 
 class Subject {
     
-    let name: String?
+    var name: String?
     let teacher: String?
     var comment: Comment?
     

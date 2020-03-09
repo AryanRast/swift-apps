@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Division {
+class Division: Codable {
     
     let code: String
     var students: [Student] = []
@@ -22,9 +22,12 @@ class Division {
     func getAbscence(for date: Date) -> Abscence? {
         
         
-        return abscences.first(where: {
-            $0.takenOn == date
-        })
+        return abscences.first {
+            let comparison = Calendar.current.compare($0.takenOn, to: date, toGranularity: .day)
+            
+            return comparison == .orderedSame
+        }
+    
     }
     
 
