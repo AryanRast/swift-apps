@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Student: Equatable, Codable {
+class Student: Codable {
     let forename: String
     let surname: String
     let birthday: Date

@@ -32,6 +32,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     @IBAction func generateButton(_ sender: Any) {
+        name.text = myCommentCard.subjects?[subjectNumber - 1].comment
     }
     
     var myCommentCard = CommentCard(subjects: [], student: nil)
@@ -40,6 +41,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var subjectName = ""
     var subjectListText = ""
     var subjectListArray = [UILabel]()
+    var wellOpinionArray = ["I think I'm doing very poorly in ", "I don't think I'm doing well in ", "I'm not too happy about ", "My performance could be slightly better in ", "I'm doing alright in ", "I think I'm doing fairly well in ", "I think this half has been good for ", "I'm really pleased with my performance in ", "I think everything is going great in ", "I don't think things could be better with "]
+    var effortOpinionArray = [". To be honest, I haven't been trying much at all in the subject ", ". Unfortunately I don't believe I've been trying in divisions and EW", ". Unfortunately I don't believe Ive been at my best during divisions", ". I am putting in minimal effort in my work and EW", ". I'm putting a decent amount of effort in everything I do",". I've been putting in an effort to improve", ". I've been working relatively hard both in and out of division", ". I've been working hard to improve my performance across the board", ". I've been trying my hardest to improve by briefly consolidating notes at house and paying full attention in class", ". I've been doing everything possible to maximise my performance; revising in house, trying my best in EWs and paying full attention in class"]
+    var enjoymentOpinionArray = ["finding the content boring and I struggle to engage.", "not really enjoying lessons at all.", "finding lessons not very interesting I'm afraid.", "finding lessons fairly interesting although sometimes it gets a bit tedious.", "finding lessons fairly interesting.", "quite enjoying the topic we cover.", "really liking the lessons and topics we are studying.", "really enjoying the lessons and content we are covering.", " taking a real interest in the content and finding lessons fun and engaging.", " really enjoying studying the subject and I find the lessons fun and engaging."]
     
     
 
@@ -48,6 +52,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(wellOpinionArray.count)
+        print(effortOpinionArray.count)
         subjectListArray.append(subjectList0)
         subjectListArray.append(subjectList1)
         subjectListArray.append(subjectList2)
@@ -125,17 +131,42 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
             present(vc, animated: true)
             
+            
+          
+            
             vc.completionHandler1 = { text in
                 self.subjectName = text!
-                print(self.subjectNumber)
+
                 self.myCommentCard.subjects?[self.subjectNumber].name = self.subjectName
-                self.subjectListArray[self.subjectNumber].text = self.subjectName
+                self.subjectListArray[self.subjectNumber].text = self.myCommentCard.subjects?[self.subjectNumber].name
                 self.subjectNumber += 1
                 }
-            
+           
             vc.completionHandler2 = { wellNumber in
-                self.name.text = "\(wellNumber!)"
+                print(self.subjectNumber)
+                self.myCommentCard.subjects?[self.subjectNumber - 1].comment = self.wellOpinionArray[wellNumber!] + (self.myCommentCard.subjects?[self.subjectNumber - 1].name)!
+                print(self.myCommentCard.subjects?[self.subjectNumber - 1].comment ?? "Error")
             }
+            
+            vc.completionHandler3 = { effortNumber in
+                print("cmpl 3 \(self.subjectNumber)")
+                self.myCommentCard.subjects?[self.subjectNumber - 1].comment! += self.effortOpinionArray[effortNumber!]
+            }
+            vc.completionHandler4 = { enjoymentNumber in
+                print("cmpl 4 \(self.subjectNumber)")
+                self.myCommentCard.subjects?[self.subjectNumber - 1].comment! += ". Also I feel like I'm " + self.enjoymentOpinionArray[enjoymentNumber!]
+            }
+            vc.completionHandler5 = { text2 in
+                self.myCommentCard.subjects?[self.subjectNumber - 1].comment! += " I think I'm best at " + text2!
+            }
+            vc.completionHandler6 = { text3 in
+                self.myCommentCard.subjects?[self.subjectNumber - 1].comment! += ", however my weaknesses include " + text3! + "."
+            }
+            
+            
+            
+            
+            
                
                        
             

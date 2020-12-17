@@ -12,7 +12,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet var wellConfirm: UIButton!
     @IBOutlet var effortConfirm: UIButton!
     @IBOutlet var enjoymentConfirm: UIButton!
-    
+    @IBOutlet var strengthField: UITextField!
+    @IBOutlet var weaknessField: UITextField!
     @IBOutlet var subjectNameButton: UIButton!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var subjectNameField: UITextField!
@@ -26,20 +27,34 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     public var completionHandler2: ((Int?) -> Void)?
     public var completionHandler3: ((Int?) -> Void)?
     public var completionHandler4: ((Int?) -> Void)?
+    public var completionHandler5: ((String?) -> Void)?
+    public var completionHandler6: ((String?) -> Void)?
     
     @IBAction func saveButton(_ sender: Any) {
         
         textVariable = subjectNameField.text ?? ""
         completionHandler1?(textVariable)
         
-        let wellPickerValue = wellPicker.selectedRow(inComponent: 0) + 1
+        let wellPickerValue = wellPicker.selectedRow(inComponent: 0) 
         completionHandler2?(wellPickerValue)
         
-        let effortPickerValue = effortPicker.selectedRow(inComponent: 0) + 1
+        let effortPickerValue = effortPicker.selectedRow(inComponent: 0)
         completionHandler3?(effortPickerValue)
         
-        let enjoymentPickerValue = enjoymentPicker.selectedRow(inComponent: 0) + 1
+        let enjoymentPickerValue = enjoymentPicker.selectedRow(inComponent: 0)
         completionHandler4?(enjoymentPickerValue)
+        
+        let textVariable2 = strengthField.text ?? ""
+        if textVariable2 != "" {
+            completionHandler5?(textVariable2)
+        }
+        
+        
+        let textVariable3 = weaknessField.text ?? ""
+        if textVariable3 != "" {
+            completionHandler6?(textVariable3)
+        }
+        
         
         dismiss(animated: true)
     }

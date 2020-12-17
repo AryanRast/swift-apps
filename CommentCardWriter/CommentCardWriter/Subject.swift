@@ -13,9 +13,9 @@ class Subject {
     
     var name: String?
     let teacher: String?
-    var comment: Comment?
+    var comment: String?
     
-    init(name: String?, teacher: String?, comment: Comment?){
+    init(name: String?, teacher: String?, comment: String?){
         self.name = name
         self.teacher = teacher
         self.comment = comment

@@ -22,10 +22,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7R-Zb-Sl3">
-                                <rect key="frame" x="22" y="53" width="235" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7R-Zb-Sl3">
+                                <rect key="frame" x="22" y="40" width="369" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -229,14 +229,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Particular weaknesses?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipi-Zo-zql">
-                                <rect key="frame" x="24" y="516" width="255" height="39"/>
+                                <rect key="frame" x="20" y="622" width="255" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Particular strengths?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBq-ky-SIc">
-                                <rect key="frame" x="25" y="619" width="235" height="35"/>
+                                <rect key="frame" x="21" y="513" width="235" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -256,23 +256,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter weaknesses" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byt-6G-gFG">
-                                <rect key="frame" x="25" y="563" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="weaknessesField:" destination="R22-8a-7F8" eventType="touchUpInside" id="3Yf-KX-y9s"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter strenghts" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNi-au-gqd">
-                                <rect key="frame" x="25" y="662" width="374" height="34"/>
+                                <rect key="frame" x="20" y="563" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="strenghtsField:" destination="R22-8a-7F8" eventType="touchUpInside" id="YGD-sh-Iht"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeZ-mW-jrM">
                                 <rect key="frame" x="135" y="761" width="145" height="39"/>
@@ -315,6 +303,12 @@
                                 <rect key="frame" x="293" y="379" width="101" height="90"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter weaknesses" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byt-6G-gFG">
+                                <rect key="frame" x="20" y="675" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="khw-xg-oWy"/>
@@ -325,9 +319,11 @@
                         <outlet property="enjoymentConfirm" destination="iC3-mw-ZhB" id="Vh9-hw-EJm"/>
                         <outlet property="enjoymentPicker" destination="IMa-ix-vB3" id="3hf-vo-UiY"/>
                         <outlet property="saveButton" destination="BeZ-mW-jrM" id="5Dx-XA-8YF"/>
+                        <outlet property="strengthField" destination="DNi-au-gqd" id="g1k-Zm-HY6"/>
                         <outlet property="subjectName" destination="nAM-oG-gRx" id="42a-cT-b4a"/>
                         <outlet property="subjectNameButton" destination="C5P-uR-BkF" id="VaH-QR-a0k"/>
                         <outlet property="subjectNameField" destination="vgR-Ho-D2X" id="BDz-la-YNa"/>
+                        <outlet property="weaknessField" destination="Byt-6G-gFG" id="o9D-UO-gZ0"/>
                         <outlet property="wellConfirm" destination="jS3-7B-bEk" id="G1c-7f-Q23"/>
                         <outlet property="wellPicker" destination="Mpm-fA-kcF" id="Mli-K7-3NF"/>
                     </connections>
@@ -335,6 +331,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6W4-ok-cn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="138.61607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jdo-r4-vPy">
+            <objects>
+                <viewController id="T53-aT-18E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEP-rv-otf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Phy-N4-7U1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muH-gZ-H6l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="139"/>
         </scene>
     </scenes>
     <resources>
